@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <style>html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }</style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Streamer.bot WebSocket Server Config
+        window.config = {
+            host: '127.0.0.1',
+            port: 8080,
+            endpoint: '/',
+            files_position: "files/", // Position of all the amen sfx mp3 files
+            amen_std_volume: 0.2, // Volume of the standard amen, played by people who don't have a personal amen
+            emote_limit: 1, // Number of amen skipped before dropping an emote
+            std_amen_chance: 0.6, // Value of the probability that the standard amen plays against a random one, from 0 to 1
+            std_amen_random_reduction_volume: 0.0
+        };
+    </script>
+
+    <!-- Custom Modules -->
+    <!-- <script type="module" src="https://cdn.streamer.bot/html-overlay/modules/splat-channel-reward.js?rewardTitle=SPLAT&v=3"></script> -->
+    <!-- <script type="module" src="https://cdn.streamer.bot/html-overlay/modules/emote-rain.js?maxEmotes=20&v=3"></script> -->
+    <!-- <script type="module" src="https://cdn.streamer.bot/html-overlay/modules/show-image.js?rewardTitle=DEE&imageUrl=https://streamer.bot/logo.png&seconds=2&v=3"></script> -->
+    <script type="module" src="modules/tmi.js"></script>
+    <script type="module" src="modules/amen-handler_IRC.js"></script>
+</body>
+</html>
